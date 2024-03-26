@@ -1,7 +1,6 @@
 package com.colak.springjpaembedded.tutorial.jpa;
 
 import jakarta.persistence.AttributeOverride;
-import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -36,16 +35,9 @@ public class Article {
 
     @Embedded
     // @AttributeOverride annotation allows us to override the mapping of fields in embeddable classes for each use
-    @AttributeOverrides({
-            @AttributeOverride(
-                    name = "name",
-                    column = @Column(name = "temp_name")
-            ),
-            @AttributeOverride(
-                    name = "login",
-                    column = @Column(name = "temp_login")
-            )
-    })
+    // It seems @AttributeOverrides container annotation is not necessary anymore
+    @AttributeOverride(name = "name", column = @Column(name = "temp_name"))
+    @AttributeOverride(name = "login", column = @Column(name = "temp_login"))
     private Author tempAuthor;
 
     @Column(unique = true)
