@@ -8,6 +8,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 // The @Embeddable annotation is used to indicate that a class should be embedded within another entity.
+// In our case Author is embedded into Article class
 @Embeddable
 
 @Getter
@@ -16,8 +17,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Author {
-
     private String name;
-
     private String login;
 }

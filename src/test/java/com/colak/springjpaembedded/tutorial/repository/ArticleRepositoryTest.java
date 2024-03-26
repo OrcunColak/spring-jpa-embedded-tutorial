@@ -1,6 +1,7 @@
 package com.colak.springjpaembedded.tutorial.repository;
 
 import com.colak.springjpaembedded.tutorial.jpa.Article;
+import com.colak.springjpaembedded.tutorial.jpa.Author;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,9 +17,13 @@ class ArticleRepositoryTest {
     private ArticleRepository repository;
 
     @Test
-    void findByAuthorLogin () {
+    void findByAuthorLogin() {
         List<Article> list = repository.findByAuthorLogin("john_doe_login");
         assertThat(list).hasSize(1);
+
+        Article first = list.getFirst();
+        Author tempAuthor = first.getTempAuthor();
+        assertThat(tempAuthor.getName()).isEqualTo("Temp John Doe");
     }
 
 
