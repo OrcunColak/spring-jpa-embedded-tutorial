@@ -1,22 +1,23 @@
 package com.colak.springjpatutorial.tutorial.jpa;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Embeddable;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
 // The @Embeddable annotation is used to indicate that a class should be embedded within another entity.
 // In our case Author is embedded into Article class
 @Embeddable
 
 @Getter
-@Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
 public class Author {
     private String name;
+
     private String login;
+
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "city_id")
+    private City city;
 }

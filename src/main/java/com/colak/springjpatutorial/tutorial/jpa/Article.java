@@ -1,5 +1,6 @@
 package com.colak.springjpatutorial.tutorial.jpa;
 
+import jakarta.persistence.AssociationOverride;
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
@@ -7,23 +8,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
 
 
 @Entity
 @Table(name = "articles")
 
 @Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class Article {
 
     @Id
@@ -41,6 +35,8 @@ public class Article {
     // It seems @AttributeOverrides container annotation is not necessary anymore
     @AttributeOverride(name = "name", column = @Column(name = "co_author_name"))
     @AttributeOverride(name = "login", column = @Column(name = "co_author_login"))
+
+    @AssociationOverride(name = "city", joinColumns = @JoinColumn(name = "co_city_id"))
     private Author coAuthor;
 
     @Column(unique = true)

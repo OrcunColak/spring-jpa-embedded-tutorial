@@ -9,3 +9,8 @@ Using @Embedded and @Embeddable annotations we can divide a table into multiple 
 
 The original idea is from  
 https://medium.com/jpa-java-persistence-api-guide/hibernate-attributeoverride-for-embaddable-entity-15e289f116a7
+
+# AssociationOverride
+
+The original idea is from  
+https://medium.com/jpa-java-persistence-api-guide/hibernate-associationoverride-for-references-override-in-subclass-4807abf0d7f5
