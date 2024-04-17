@@ -1,4 +1,4 @@
-package com.colak.springjpaembedded.tutorial.jpa;
+package com.colak.springjpatutorial.tutorial.jpa;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

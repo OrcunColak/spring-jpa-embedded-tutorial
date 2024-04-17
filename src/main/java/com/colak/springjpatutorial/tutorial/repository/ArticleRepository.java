@@ -1,6 +1,6 @@
-package com.colak.springjpaembedded.tutorial.repository;
+package com.colak.springjpatutorial.tutorial.repository;
 
-import com.colak.springjpaembedded.tutorial.jpa.Article;
+import com.colak.springjpatutorial.tutorial.jpa.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

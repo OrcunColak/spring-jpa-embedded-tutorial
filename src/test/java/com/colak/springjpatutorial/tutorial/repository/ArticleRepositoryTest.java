@@ -1,7 +1,7 @@
-package com.colak.springjpaembedded.tutorial.repository;
+package com.colak.springjpatutorial.tutorial.repository;
 
-import com.colak.springjpaembedded.tutorial.jpa.Article;
-import com.colak.springjpaembedded.tutorial.jpa.Author;
+import com.colak.springjpatutorial.tutorial.jpa.Article;
+import com.colak.springjpatutorial.tutorial.jpa.Author;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
