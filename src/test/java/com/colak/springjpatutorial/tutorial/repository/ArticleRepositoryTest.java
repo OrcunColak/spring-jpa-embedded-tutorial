@@ -25,6 +25,4 @@ class ArticleRepositoryTest {
         Author tempAuthor = first.getCoAuthor();
         assertThat(tempAuthor.getName()).isEqualTo("Co John Doe");
     }
-
-
 }

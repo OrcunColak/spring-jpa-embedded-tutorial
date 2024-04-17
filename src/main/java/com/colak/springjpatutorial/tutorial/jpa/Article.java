@@ -32,6 +32,8 @@ public class Article {
 
     // The @Embedded annotation is then used on a field in the entity class to specify that this field is an embedded type.
     @Embedded
+    @AttributeOverride(name = "name", column = @Column(name = "primary_author_name"))
+    @AttributeOverride(name = "login", column = @Column(name = "primary_author_login"))
     private Author primaryAuthor;
 
     @Embedded
