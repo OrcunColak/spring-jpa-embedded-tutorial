@@ -18,12 +18,12 @@ class ArticleRepositoryTest {
 
     @Test
     void findByAuthorLogin() {
-        List<Article> list = repository.findByAuthorLogin("john_doe_login");
+        List<Article> list = repository.findByPrimaryAuthorLogin("john_doe_login");
         assertThat(list).hasSize(1);
 
         Article first = list.getFirst();
-        Author tempAuthor = first.getTempAuthor();
-        assertThat(tempAuthor.getName()).isEqualTo("Temp John Doe");
+        Author tempAuthor = first.getCoAuthor();
+        assertThat(tempAuthor.getName()).isEqualTo("Co John Doe");
     }
 
 

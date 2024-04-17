@@ -1,6 +1,6 @@
 -- Inserting a new article
-insert into articles (title, content, name, login , temp_name, temp_login)
-values ('Sample Article 1', 'This is the content of the first article.', 'John Doe', 'john_doe_login' , 'Temp John Doe', 'temp_john_doe_login');
+insert into articles (title, content, name, login , co_author_name, co_author_login)
+values ('Sample Article 1', 'This is the content of the first article.', 'John Doe', 'john_doe_login' , 'Co John Doe', 'co_john_doe_login');
 
 -- Inserting another article
 insert into articles (title, content, name, login)

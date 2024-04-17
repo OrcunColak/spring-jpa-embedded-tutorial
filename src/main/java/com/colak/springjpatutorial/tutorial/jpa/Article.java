@@ -32,14 +32,14 @@ public class Article {
 
     // The @Embedded annotation is then used on a field in the entity class to specify that this field is an embedded type.
     @Embedded
-    private Author author;
+    private Author primaryAuthor;
 
     @Embedded
     // @AttributeOverride annotation allows us to override the mapping of fields in embeddable classes for each use
     // It seems @AttributeOverrides container annotation is not necessary anymore
-    @AttributeOverride(name = "name", column = @Column(name = "temp_name"))
-    @AttributeOverride(name = "login", column = @Column(name = "temp_login"))
-    private Author tempAuthor;
+    @AttributeOverride(name = "name", column = @Column(name = "co_author_name"))
+    @AttributeOverride(name = "login", column = @Column(name = "co_author_login"))
+    private Author coAuthor;
 
     @Column(unique = true)
     private String title;

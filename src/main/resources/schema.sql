@@ -5,6 +5,6 @@ CREATE TABLE IF NOT EXISTS articles
     content VARCHAR(255),
     name    VARCHAR(255),
     login   VARCHAR(255),
-    temp_name    VARCHAR(255),
-    temp_login   VARCHAR(255)
+    co_author_name    VARCHAR(255),
+    co_author_login   VARCHAR(255)
 );

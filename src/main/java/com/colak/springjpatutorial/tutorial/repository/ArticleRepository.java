@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface ArticleRepository extends JpaRepository<Article, Long> {
 
-    List<Article> findByAuthorName(String name);
+    List<Article> findByPrimaryAuthorName(String name);
 
-    List<Article> findByAuthorLogin(String login);
+    List<Article> findByPrimaryAuthorLogin(String login);
 }
